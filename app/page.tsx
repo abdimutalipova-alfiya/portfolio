@@ -83,11 +83,10 @@
 //     </Suspense>
 //   );
 // }
-
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Navigation from "@/components/Navigation";
 import About from "@/components/AboutMe";
 import Internship from "@/components/Internship";
@@ -101,7 +100,6 @@ export default function Home() {
     undefined
   );
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     // Handle initial hash navigation
@@ -145,7 +143,7 @@ export default function Home() {
     return () => {
       observers.forEach((observer) => observer.disconnect());
     };
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <div>
