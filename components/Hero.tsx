@@ -70,7 +70,7 @@ export default function Hero() {
                 width={300}
                 height={300}
                 style={{ objectFit: "cover", borderRadius: "50%" }}
-                priority // loads eagerly like loading="eager"
+                priority
               />
             </Box>
 
