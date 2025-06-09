@@ -61,7 +61,13 @@ export default function Hobby() {
               </Typography>
             </Box>
 
-            <Grid container alignItems="center" spacing={8} mt={6}>
+            <Grid
+              container
+              alignItems="center"
+              justifyContent="center"
+              spacing={8}
+              mt={6}
+            >
               <Grid size={{ xs: 12, md: 7 }}>
                 <Box
                   sx={{
@@ -125,7 +131,12 @@ export default function Hobby() {
                 </Box>
               </Grid>
 
-              <Grid size={{ xs: 12, md: 5 }} display="flex">
+              <Grid
+                size={{ xs: 12, md: 5 }}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
                 <Box
                   component="img"
                   src="/esn.JPG"
