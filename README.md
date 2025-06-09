@@ -6,11 +6,7 @@ Welcome to my personal developer portfolio built with **Next.js**. This site sho
 
 - ⚛️ Built with [Next.js](https://nextjs.org/)
 - 🎨 Styled with [MUI](https://mui.com/) (or Tailwind CSS if you're using that)
-- 💡 Animated sections with [Framer Motion](https://www.framer.com/motion/)
 - 📱 Responsive and mobile-friendly design
-- 🌐 SEO-friendly structure
-- 📸 Image optimization using `next/image`
-- 💬 Contact form with email integration (optional)
 - 🌍 Highlight on cultural and personal experiences outside of coding
 
 ## 🧰 Tech Stack
