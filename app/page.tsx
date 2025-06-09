@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import React, { Suspense, useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Navigation from "@/components/Navigation";
 import About from "@/components/AboutMe";
@@ -9,7 +10,7 @@ import Hero from "@/components/Hero";
 import Contact from "@/components/Contact";
 import Hobby from "@/components/Hobby";
 
-export default function Home() {
+function Home() {
   const [activeSection, setActiveSection] = useState<SectionId | undefined>(
     undefined
   );
@@ -65,12 +66,20 @@ export default function Home() {
       <Navigation activeSection={activeSection} />
       <main>
         <Hero />
-
         <About />
         <Hobby />
         <Internship />
         <Contact />
       </main>
     </div>
+  );
+}
+
+// Wrap Home in Suspense for useSearchParams compatibility with SSR
+export default function HomeWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Home />
+    </Suspense>
   );
 }
