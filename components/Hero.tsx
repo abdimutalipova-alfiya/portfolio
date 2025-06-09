@@ -35,15 +35,13 @@ const GradientBox = styled(Box)(({ theme }) => ({
 export default function Hero() {
   const router = useRouter();
 
-  const basePath = "/portfolio";
-
   const routeToProjects = (): void => {
-    router.push(`${basePath}/projects?scroll=projects`);
+    router.push("/projects?scroll=projects");
   };
 
   const handleDownloadCV = (): void => {
     const link = document.createElement("a");
-    link.href = `${basePath}/cv.pdf`;
+    link.href = "/cv.pdf";
     link.download = "cv.pdf";
     document.body.appendChild(link);
     link.click();
@@ -67,7 +65,7 @@ export default function Hero() {
               }}
             >
               <Image
-                src={`${basePath}/profile.jpg`}
+                src={`/profile.jpg`}
                 alt="Alfiya Abdimutalipova"
                 width={300}
                 height={300}
