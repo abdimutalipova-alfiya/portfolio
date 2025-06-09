@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import React from "react";
 import { Box, Container, Typography, Button, Stack, Fade } from "@mui/material";
@@ -63,17 +64,13 @@ export default function Hero() {
                 border: "3px solid rgba(255,255,255,0.3)",
               }}
             >
-              <img
+              <Image
                 src="/profile.jpg"
                 alt="Alfiya Abdimutalipova"
                 width={300}
                 height={300}
-                style={{
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "100%",
-                }}
-                loading="eager"
+                style={{ objectFit: "cover", borderRadius: "50%" }}
+                priority // loads eagerly like loading="eager"
               />
             </Box>
 
