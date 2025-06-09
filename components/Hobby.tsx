@@ -4,11 +4,8 @@ import React from "react";
 import {
   Box,
   Container,
-  Paper,
   Typography,
-  Button,
   Grid,
-  Stack,
   List,
   ListItem,
   Fade,

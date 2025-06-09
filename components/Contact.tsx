@@ -11,7 +11,6 @@ import Grid from "@mui/material/Grid";
 import {
   Email as EmailIcon,
   Place as PlaceIcon,
-  Send as SendIcon,
   LinkedIn as LinkedInIcon,
 } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
@@ -118,26 +117,6 @@ export default function Contact() {
             </Grid>
           ))}
         </Grid>
-
-        {/* <Fade in timeout={1800}>
-          <Box textAlign="center">
-            <Button
-              variant="contained"
-              size="large"
-              startIcon={<SendIcon />}
-              onClick={handleGetInTouch}
-              sx={{
-                bgcolor: "white",
-                color: "primary.main",
-                "&:hover": {
-                  bgcolor: "grey.100",
-                },
-              }}
-            >
-              Get In Touch
-            </Button>
-          </Box>
-        </Fade> */}
         <Typography variant="body2" align="center" sx={{ mt: 4, opacity: 0.7 }}>
           All rights reserved © 2025 Alfiya Abdimutalipova
         </Typography>

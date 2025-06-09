@@ -7,84 +7,20 @@ import {
   Grid,
   Card,
   CardContent,
-  Divider,
-  Avatar,
-  Paper,
   List,
   ListItem,
-  ListItemText,
   Grow,
   useTheme,
 } from "@mui/material";
-import {
-  Security,
-  Psychology,
-  SmartToy,
-  DataObject,
-  Architecture,
-  Storage,
-  Api,
-  CloudUpload,
-  TrendingUp,
-  Shield,
-  Speed,
-  GitHub,
-  Launch,
-  Timeline as TimelineIcon,
-} from "@mui/icons-material";
 
-import { CheckCircle } from "@mui/icons-material";
 interface ProjectFeature {
   title: string;
   description: string;
   technologies: string[];
 }
-interface TimelineEvent {
-  week: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
+
 export default function Internship() {
   const theme = useTheme();
-
-  const timelineEvents: TimelineEvent[] = [
-    {
-      week: "Weeks 1-2",
-      title: "Project Setup & Analysis",
-      description:
-        "Environment setup, technology evaluation, and embedding model selection (all-mpnet-base-v2)",
-      icon: <Architecture />,
-    },
-    {
-      week: "Weeks 3-5",
-      title: "Sidebar Chat Development",
-      description:
-        "Built React-based chat interface with Azure OpenAI integration and session management",
-      icon: <SmartToy />,
-    },
-    {
-      week: "Weeks 6-8",
-      title: "Observations Enhancement",
-      description:
-        "Implemented AI-powered text improvement with dynamic UI integration",
-      icon: <Psychology />,
-    },
-    {
-      week: "Weeks 9-11",
-      title: "RAG Pipeline Implementation",
-      description:
-        "Developed hybrid search system combining semantic similarity with structured data filtering",
-      icon: <DataObject />,
-    },
-    {
-      week: "Week 12",
-      title: "Testing & Optimization",
-      description:
-        "Performance optimization, multi-tenancy implementation, and vector database migration research",
-      icon: <Speed />,
-    },
-  ];
 
   const projectFeatures: ProjectFeature[] = [
     {

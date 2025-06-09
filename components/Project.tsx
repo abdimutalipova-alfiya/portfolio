@@ -3,10 +3,7 @@ import {
   Box,
   Container,
   Typography,
-  Card,
-  CardContent,
   Chip,
-  Button,
   Grid,
   Paper,
   List,
@@ -16,17 +13,7 @@ import {
   Divider,
   alpha,
 } from "@mui/material";
-import {
-  Code,
-  Web,
-  Psychology,
-  EventNote,
-  CheckCircle,
-  Timeline,
-  Group,
-  Settings,
-  Launch,
-} from "@mui/icons-material";
+import { CheckCircle, Launch } from "@mui/icons-material";
 import { Project as ProjectType } from "@/types";
 
 interface ProjectsPageProps {

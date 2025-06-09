@@ -3,18 +3,6 @@ export interface NavItem {
   href: string
 }
 
-export interface Hobby {
-  title: string
-  description: string
-  icon: string
-}
-
-export interface Reason {
-  title: string
-  description: string
-  icon: React.ReactNode
-}
-
 export type SectionId = 'home' | 'about' | 'internship' | 'projects'
 
 

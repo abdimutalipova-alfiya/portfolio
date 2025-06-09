@@ -64,7 +64,7 @@ export default function Hero() {
               }}
             >
               <img
-                src="/profile-4.jpg"
+                src="/profile.jpg"
                 alt="Alfiya Abdimutalipova"
                 width={300}
                 height={300}

@@ -4,24 +4,13 @@ import {
   Container,
   Typography,
   Grid,
-  Card,
-  CardContent,
   Paper,
   Fade,
-  Avatar,
   Stack,
   Chip,
   Grow,
-  LinearProgress,
 } from "@mui/material";
-import {
-  Code as CodeIcon,
-  School as SchoolIcon,
-  Lightbulb as LightbulbIcon,
-  Public as PublicIcon,
-  Computer as ComputerIcon,
-  Psychology as PsychologyIcon,
-} from "@mui/icons-material";
+import { Computer as ComputerIcon } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
@@ -149,20 +138,6 @@ export default function About() {
             </Typography>
           </Box>
 
-          {/* <Typography
-            variant="h6"
-            sx={{
-              textAlign: "center",
-              mb: 6,
-              color: "text.secondary",
-              maxWidth: 600,
-              mx: "auto",
-            }}
-          >
-            A comprehensive overview of my technical skills and the technologies
-            I'm passionate about
-          </Typography> */}
-
           <Grid container spacing={3}>
             {techStack.map((tech, index) => (
               <Grid size={{ xs: 12, md: 6, lg: 4 }} key={index}>
@@ -219,64 +194,6 @@ export default function About() {
             </Typography>
           </Box>
         </Box>
-
-        {/* <Grid container spacing={6} alignItems="stretch">
-          <Grid size={{ xs: 12, lg: 7 }}>
-            <Typography
-              variant="h3"
-              component="h3"
-              gutterBottom
-              color="text.primary"
-              mb={4}
-              sx={{ fontWeight: "bold" }}
-            >
-              What Drives Me
-            </Typography>
-
-            <Grid container spacing={3}>
-              {values.map((value, index) => (
-                <Grid size={{ xs: 12, md: 6 }} key={index}>
-                  <Fade in timeout={1000 + index * 150}>
-                    <Card
-                      sx={{
-                        height: "100%",
-                        transition: "transform 0.2s",
-                      }}
-                    >
-                      <CardContent
-                        sx={{
-                          p: 3,
-                          height: "100%",
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <Box display="flex" alignItems="center" gap={2} mb={2}>
-                          <Box color="primary.main">{value.icon}</Box>
-                          <Typography
-                            variant="h6"
-                            component="h4"
-                            color="primary.main"
-                            sx={{ fontWeight: "bold" }}
-                          >
-                            {value.title}
-                          </Typography>
-                        </Box>
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          sx={{ flexGrow: 1 }}
-                        >
-                          {value.description}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Fade>
-                </Grid>
-              ))}
-            </Grid>
-          </Grid>
-        </Grid> */}
       </Container>
     </Box>
   );

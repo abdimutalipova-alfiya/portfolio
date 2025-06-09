@@ -28,7 +28,7 @@ const GradientAppBar = styled(AppBar)(({ theme }) => ({
 }));
 
 interface NavigationProps {
-  activeSection?: SectionId; // Make optional since not all pages will have sections
+  activeSection?: SectionId;
 }
 
 export default function Navigation({ activeSection }: NavigationProps) {
@@ -39,16 +39,14 @@ export default function Navigation({ activeSection }: NavigationProps) {
 
   const navItems: NavItem[] = [
     { name: "Home", href: "/" },
-    { name: "About me", href: "/#about" }, // Include both route and hash
+    { name: "About me", href: "/#about" },
     { name: "Internship", href: "/#internship" },
     { name: "Projects", href: "/projects" },
   ];
 
   const handleNavigation = (href: string): void => {
-    // Close mobile menu
     setMobileOpen(false);
 
-    // If we're already on the home page and it's a hash link
     if (pathname === "/" && href.startsWith("#")) {
       const element = document.querySelector(href);
       if (element) {
@@ -57,7 +55,6 @@ export default function Navigation({ activeSection }: NavigationProps) {
       return;
     }
 
-    // If it's a hash link but we're not on home page
     if (href.includes("#")) {
       const [path, hash] = href.split("#");
       window.location.href = `${path}#${hash}`;
